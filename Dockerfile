@@ -1,5 +1,3 @@
-# I'm using trixie (testing), but if you're running stable,
-# you'll want to change this to bookworm.
 FROM docker.io/library/debian:trixie
 
 # Install python's build deps
@@ -16,6 +14,8 @@ WORKDIR /home
 # before building the container image:
 # $ ./configure
 # $ make
+# If you run into problems installing python, just copy the 
+# unzipped tarball & run these commands in the container.
 COPY Python-3.13.0rc1 python3.13/
 
 # To build & run: 
